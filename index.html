@@ -407,8 +407,8 @@
 
             // iss
             m4=mat4.create(); 
-            mat4.rotate(m4,m1,-tiempo, [0,1,0]) // rotar alrededor de la tierra
-            mat4.rotate(m4,m4,-20*tiempo, [0,0,1]) // 
+            mat4.rotate(m4,m1,-tiempo, [0,1,0]) // anular la rotacion de la tierra con respecto al sol
+            mat4.rotate(m4,m4,-20*tiempo, [0,0,1]) // rotar alrededor de la tierra
             mat4.translate(m4,m4,[12,0,0]);    
             mat4.rotate(m4,m4,Math.PI/2, [0,1,0]) // rotar el iss para que apunte a la tierra
             setTransform(iss,m4);
